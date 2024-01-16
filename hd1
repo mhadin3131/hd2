@@ -1,0 +1,198 @@
+#############################
+########################################### Conditional Statements ###############
+#############################
+
+################################## If ##############################
+########
+
+################ Positive or Negative #################
+num = 20
+
+if num >= 0:
+    print("The number is Positive")
+
+if num < 0:
+    print("The number is Negative!")
+
+print("Done!")
+
+##############
+num = int(input("Enter you Number: "))
+
+if num > 0:
+    print("The number is Positive")
+
+if num < 0:
+    print("The number is Negative!")
+    
+if num == 0:
+    print("The number is Zero!")
+
+print("Done!")
+
+################# Odd or Even #####################
+num = int(input("Enter you Number: "))
+
+if num%2 == 0:
+    print("The number is Even")
+
+if num%2 != 0:
+    print("The number is Odd")
+
+################# Print Even Number & convert odd number to Even ###################
+num = int(input("Enter you Number: "))
+
+if num%2 == 0:
+    print(num)
+
+if num%2 != 0:
+    print(num*2)
+
+################
+num = int(input("Enter you Number: "))
+
+if num%2 == 0:
+    if num%3 == 0:
+        if num%5 == 0:
+            print(num)
+            
+    if num%3 != 0:
+        print(num*3)
+
+if num%2 != 0:
+    print("The number is our of Range!")
+
+################################## if & else #################################
+################
+    
+num = int(input("Enter you Number: "))
+
+if num < 100:
+    if num%2 == 0:
+        if num%3 == 0:
+            print(num)
+        else:
+            print(num*3)
+    else:
+        print(num*3)
+
+else: # if num >= 100:
+    print("The number is our of Range!")
+
+###################
+num = int(input("Enter you Number: "))
+
+if num < 100:
+    if num%2 == 0:
+        if num%3 == 0:
+            print(num)
+        else:
+            print(num*3)
+    else:
+        print(num*3)
+if 100 < num < 200:
+    if num%5 == 0:
+            print(num)
+else: # if num >= 100:
+    print("The number is our of Range!")
+
+#######################################if & elif & else #########################################
+##################
+
+num1 = int(input("Enter you Number: "))
+num2 = int(input("Enter you Number: "))
+
+if num1 < num2:
+    if num1%2 == 0:
+        if num1%3 == 0:
+            print(num)
+        elif num1%3 != 0:
+            print(num*3)
+    else:
+        print(num*3)
+elif 100 < num < 200:
+    if num%5 == 0:
+            print(num)
+else: # if num >= 100:
+    print("The number is our of Range!")
+
+######################## Student Scores 1 ###########################
+
+Student_scores = {"math":17,"physics":14,"arabic":15,"english":20}
+
+if Student_scores["math"] >= 17: #First Condition
+    print("math grade is A")
+
+elif 14 < Student_scores["math"] <= 16: #Second Condition
+    print("math grade is B")
+
+elif 10 <= Student_scores["math"] <= 14: #Third Condition
+    print("math grade is C")
+
+else: # elif Student_scores["math"] < 10 # Fourth Condition
+    print("Failed")
+
+######################## Student Scores 2 ###########################
+Student_scores = {"math":17,"physics":14,"arabic":15,"english":20}
+
+if Student_scores["math"] >= 17: 
+    if Student_scores["math"] <= 18.5:
+       print("math grade is A+")
+    else:
+        print("math grade is A-")
+
+elif 14 < Student_scores["math"] <= 16:
+    if Student_scores["math"] >= 15: #or if 15 <= Student_scores["math"] <=16
+        print("math grade is B+")
+    if Student_scores["math"] < 15: 
+        print("math grade is B-")
+
+elif 10 <= Student_scores["math"] <= 14:
+    if Student_scores["math"] >= 12:
+        print("math grade is C+")
+    if Student_scores["math"] < 12: 
+        print("math grade is C-")
+
+else: 
+    print("Failed")
+
+######################## Student Scores 3:Comparison between two Dictionaries###########################
+Student_scores = {"math":17,"physics":14,"arabic":15,"english":20}
+Grade = {"A":17,"B":14,"C":10}
+
+if Student_scores["math"] >= Grade["A"]: 
+    Student_scores["math"] = "A"
+
+elif Grade["B"] < Student_scores["math"] < Grade["A"]:
+    Student_scores["math"] = "B"
+
+elif Grade["C"] <= Student_scores["math"] <= Grade["B"]:
+    Student_scores["math"] = "C"
+
+else: 
+    print("Failed")
+
+#print("Math grade is: ",Student_scores["math"])
+print(Student_scores)
+
+############################## Date Based on Day Nember###################
+Daynum = int(input("Enter your Number: "))
+
+Month = 0
+Day = 0
+
+if 0 < Daynum <= 186:
+    Month = (Daynum // 31) + 1 # Month counter
+    Day = Daynum % 31 #Day Counter
+
+elif 186 < Daynum <= 365:
+    Daynum -= 186
+    Month = (Daynum // 30) + 1 + 6 # Month counter
+    Day = Daynum % 30 #Day Counter
+
+else:
+    print("The Day number is out of range!")
+
+print("Today is: ", Month, ".", Day)
+
+    
